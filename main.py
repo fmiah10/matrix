@@ -2,16 +2,20 @@ from display import new_screen, display, save_extension
 from draw import add_edge, draw_lines
 from matrix import new_matrix, print_matrix, ident, matrix_mult
 
-m1 = [[2, 3, 4], [1, 5, 2]]
-m2 = [[1, 2], [4, 6], [8, 4], [7, 3]]
+m1 = [[2, 3, 4, 1], [1, 5, 2, 1], [1, 35, 6, 1], [4,75, 7, 1]]
+m2 = [[1, 2, 3, 1], [4, 6, 2, 1], [8, 4, 14, 1], [7, 3, 36, 1]]
 
+print("Matrix m1:")
 print_matrix(m1)
+print("Matrix m2:")
 print_matrix(m2)
 
 id = new_matrix()
 ident(id)
+print("Identity Matrix:")
 print_matrix(id)
 
+print("m1 * m2:")
 print_matrix(matrix_mult(m1, m2))
 
 screen = new_screen()
