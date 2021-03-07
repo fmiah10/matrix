@@ -31,13 +31,13 @@ def ident( matrix ):
 #m1 * m2 -> m2
 def matrix_mult( m1, m2 ):
     m3 = []
-    for x in range (len(m2)): #columns in m2
-        ans = [] #sums per column
-        for y in range (len(m1[0])): #rows
+    for i in range (len(m2)):
+        ans = []
+        for j in range (len(m1[0])): 
             sum = 0
-            for z in range (len (m1)):
-                sum += (m1[z][y] * m2[x][z])
-            ans.append (sum)
+            for k in range (len (m1)):
+                sum += (m1[k][j] * m2[i][k])
+            ans.append(sum)
         m3.append(ans)
     m2 = m3
     return m2
